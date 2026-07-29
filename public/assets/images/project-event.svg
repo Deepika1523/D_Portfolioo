@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#0F172A"/>
+  <rect x="40" y="40" width="720" height="520" rx="12" fill="#1E293B" stroke="#334155" stroke-width="2"/>
+  <circle cx="80" cy="80" r="8" fill="#EF4444"/>
+  <circle cx="105" cy="80" r="8" fill="#F59E0B"/>
+  <circle cx="130" cy="80" r="8" fill="#10B981"/>
+  <text x="400" y="85" font-family="'Work Sans', sans-serif" font-size="14" fill="#94A3B8" text-anchor="middle">Event Management System</text>
+  <rect x="80" y="130" width="640" height="380" rx="8" fill="#0F172A" stroke="#334155"/>
+  <text x="400" y="300" font-family="'Playfair Display', serif" font-size="32" font-weight="bold" fill="#38BDF8" text-anchor="middle">Event Management App</text>
+  <text x="400" y="345" font-family="'Work Sans', sans-serif" font-size="16" fill="#94A3B8" text-anchor="middle">Django • MySQL • Role Authentication</text>
+  <text x="400" y="450" font-family="'Work Sans', sans-serif" font-size="14" fill="#64748B" text-anchor="middle">Replace in public/assets/images/project-event.svg</text>
+</svg>

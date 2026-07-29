@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#18181B"/>
+  <rect x="40" y="40" width="720" height="520" rx="12" fill="#27272A" stroke="#3F3F46" stroke-width="2"/>
+  <circle cx="80" cy="80" r="8" fill="#EF4444"/>
+  <circle cx="105" cy="80" r="8" fill="#F59E0B"/>
+  <circle cx="130" cy="80" r="8" fill="#10B981"/>
+  <text x="400" y="85" font-family="'Work Sans', sans-serif" font-size="14" fill="#A1A1AA" text-anchor="middle">Donor Management System</text>
+  <rect x="80" y="130" width="640" height="380" rx="8" fill="#18181B" stroke="#3F3F46"/>
+  <text x="400" y="300" font-family="'Playfair Display', serif" font-size="32" font-weight="bold" fill="#F43F5E" text-anchor="middle">Donor Management System</text>
+  <text x="400" y="345" font-family="'Work Sans', sans-serif" font-size="16" fill="#A1A1AA" text-anchor="middle">Django • MySQL • Search & Filtering</text>
+  <text x="400" y="450" font-family="'Work Sans', sans-serif" font-size="14" fill="#71717A" text-anchor="middle">Replace in public/assets/images/project-donor.svg</text>
+</svg>
