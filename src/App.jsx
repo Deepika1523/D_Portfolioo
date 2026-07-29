@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -8,9 +9,29 @@ import Education from './components/Education';
 import Certifications from './components/Certifications';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Terms from './components/Terms';
+import PrivacyPolicy from './components/PrivacyPolicy';
 
-export default function App() {
+function HomePage() {
   const [activeSection, setActiveSection] = useState('about');
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const targetId = location.hash.replace('#', '');
+      const element = document.getElementById(targetId);
+      if (element) {
+        setTimeout(() => {
+          const offset = 80;
+          const bodyRect = document.body.getBoundingClientRect().top;
+          const elementRect = element.getBoundingClientRect().top;
+          const elementPosition = elementRect - bodyRect;
+          const offsetPosition = elementPosition - offset;
+          window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, [location]);
 
   useEffect(() => {
     const sections = ['about', 'skills', 'projects', 'education', 'certifications', 'contact'];
@@ -39,7 +60,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white text-[#333333] flex flex-col font-sans selection:bg-snow-dark selection:text-white">
+    <div className="min-h-screen bg-[#faf7f2] text-[#231b18] flex flex-col font-sans">
       {/* Fixed Header Navbar with Active Section tracking */}
       <Navbar activeSection={activeSection} />
 
@@ -57,5 +78,18 @@ export default function App() {
       {/* Footer */}
       <Footer />
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
+        <Route path="*" element={<HomePage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }

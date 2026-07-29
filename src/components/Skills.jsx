@@ -22,15 +22,15 @@ export default function Skills() {
       : skillsData.filter((cat) => cat.category === activeCategory);
 
   return (
-    <section id="skills" className="py-24 bg-[#ffffff] border-t-2 border-[#e8e8e8]">
+    <section id="skills" className="py-24 bg-[#faf7f2] border-t-2 border-[#e8dfd8]">
       <div className="max-w-[1140px] mx-auto px-4 md:px-8">
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <div>
-            <span className="text-xs uppercase tracking-widest text-[#1140c9] font-bold">02. Capabilities</span>
-            <h2 className="text-4xl sm:text-5xl font-serif font-bold text-[#171717] mt-2">Technical Skills</h2>
-            <div className="w-16 h-[3px] bg-[#1140c9] mt-4" />
+            <span className="text-xs uppercase tracking-widest text-[#c59b27] font-bold">02. Capabilities</span>
+            <h2 className="text-4xl sm:text-5xl font-serif font-bold text-[#231b18] mt-2">Technical Skills</h2>
+            <div className="w-16 h-[3px] bg-[#c59b27] mt-4" />
           </div>
 
           {/* Filter Tabs */}
@@ -41,8 +41,8 @@ export default function Skills() {
                 onClick={() => setActiveCategory(cat)}
                 className={`px-4 py-2 text-xs uppercase font-bold tracking-wider transition-all duration-300 ${
                   activeCategory === cat
-                    ? 'bg-[#1140c9] text-[#ffffff] shadow-sm'
-                    : 'bg-[#ffffff] text-[#171717] hover:bg-[#1140c9] hover:text-[#ffffff] border-2 border-[#171717]/20'
+                    ? 'bg-[#c59b27] text-[#231b18] shadow-sm'
+                    : 'bg-[#ffffff] text-[#231b18] hover:bg-[#c59b27] hover:text-[#231b18] border-2 border-[#231b18]/20'
                 }`}
               >
                 {cat}
@@ -56,14 +56,14 @@ export default function Skills() {
           {filteredCategories.map((group, idx) => (
             <div
               key={idx}
-              className="bg-[#f6f6f6] p-6 sm:p-8 border-2 border-[#171717]/15 shadow-sm hover:shadow-md transition-all duration-300 space-y-6"
+              className="bg-[#ffffff] p-6 sm:p-8 border-2 border-[#231b18]/15 shadow-sm hover:shadow-md transition-all duration-300 space-y-6"
             >
               {/* Category Header */}
-              <div className="flex items-center space-x-3 pb-4 border-b-2 border-[#171717]/15 text-[#171717]">
-                <span className="p-2.5 bg-[#252525] text-[#ffffff]">
+              <div className="flex items-center space-x-3 pb-4 border-b-2 border-[#231b18]/15 text-[#231b18]">
+                <span className="p-2.5 bg-[#231b18] text-[#c59b27]">
                   {categoryIcons[group.category] || <Code2 className="w-5 h-5" />}
                 </span>
-                <h3 className="font-serif text-xl font-bold text-[#171717]">{group.category}</h3>
+                <h3 className="font-serif text-xl font-bold text-[#231b18]">{group.category}</h3>
               </div>
 
               {/* Skills / Technology Badges */}
@@ -71,7 +71,7 @@ export default function Skills() {
                 {group.skills.map((skill, skillIdx) => (
                   <span
                     key={skillIdx}
-                    className="px-4 py-2.5 bg-[#ffffff] text-[#171717] border-2 border-[#171717]/20 text-sm font-bold tracking-tight hover:bg-[#1140c9] hover:border-[#1140c9] hover:text-[#ffffff] transition-all duration-200 shadow-2xs"
+                    className="px-4 py-2.5 bg-[#faf7f2] text-[#231b18] border-2 border-[#231b18]/20 text-sm font-bold tracking-tight hover:bg-[#c59b27] hover:border-[#c59b27] hover:text-[#231b18] transition-all duration-200 shadow-2xs"
                   >
                     {skill.name}
                   </span>
